@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-slate-50 text-slate-900;
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply px-6 py-3 bg-kingyo-red text-white rounded-full font-bold shadow-lg hover:bg-red-600 transition-all transform hover:scale-105 active:scale-95;
+    }
+
+    .card {
+        @apply bg-white rounded-xl shadow-md p-6 border border-slate-100;
+    }
+}
+
+/* Custom Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
